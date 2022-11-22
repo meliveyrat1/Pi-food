@@ -1,0 +1,60 @@
+.navbar {
+  background-color: #f5ce99ba;
+  height: 4vw;
+}
+
+.navbar_boton1 {
+  font-size: 15px;
+  height: 30px;
+  width: 162px;
+  background-color: rgba(243, 189, 72, 0.397);
+  border-color:rgba(105, 65, 5, 0.849) ;
+  
+  border-radius: 0.4vw;
+  color: black;
+  position: absolute;
+  top: 2.3%;
+  left: 24%;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.navbar_boton1:hover{
+  background-color: rgba(236, 178, 17, 0.911);
+  border-radius: 0.4vw;
+  border-color:rgba(177, 131, 6, 0.911);
+  background: rgba(236, 178, 17, 0.911);
+  box-shadow: 0 0 10px rgba(236, 178, 17, 0.911), 0 0 40px rgba(236, 178, 17, 0.911), 0 0 80px rgba(236, 178, 17, 0.911) ;
+  transition-delay: 0.4s;
+
+}
+
+.navbar_boton2 {
+  font-size: 16px;
+  height: 30px;
+  width: 162px;
+  background-color: rgba(243, 189, 72, 0.397);
+  border-color:rgba(105, 65, 5, 0.849) ;
+  border-radius: 0.4vw;
+  color: black;
+  position: absolute;
+  top: 2.3%;
+  left: 45%;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.navbar_boton2:hover{
+   background-color: rgba(236, 178, 17, 0.911);
+  border-radius: 0.4vw;
+  border-color:rgba(177, 131, 6, 0.911);
+  background: rgba(236, 178, 17, 0.911);
+  box-shadow: 0 0 10px rgba(236, 178, 17, 0.911), 0 0 40px rgba(236, 178, 17, 0.911), 0 0 80px rgba(236, 178, 17, 0.911) ;
+  transition-delay: 0.4s;
+}
+
+.navbar_searchbar {
+  display: flex;
+  justify-content: space-around;
+  gap: 5rem;
+}

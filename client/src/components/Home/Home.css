@@ -1,0 +1,138 @@
+
+
+.home {
+ 
+  background: url("home2.jpg");
+  background-attachment: fixed;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat; 
+ 
+}
+
+  
+.filtros {
+  gap: 7rem;
+  height: 4vw;
+  height: 12;
+  opacity: 0.9;
+  
+}
+
+.filtro1 {
+  font-size: 15px;
+  height: 28px;
+  width: 160px;
+  background-color:rgba(243, 189, 72, 0.397); 
+  border-color:rgba(250, 204, 77, 0.76);
+  color: black;
+  position: absolute;
+  top: 10.5%;
+  left: 21%;
+  cursor: pointer;
+  border-radius: 0.4vw;
+  text-align: center;
+}
+.filtro2 {
+  font-size: 15px;
+  height: 28px;
+  width: 160px;
+  background-color:rgba(243, 189, 72, 0.397); 
+  border-color:rgba(250, 204, 77, 0.76);
+  border-radius: 0.4vw;
+  color:black;
+  position: absolute;
+  top: 10.5%;
+  left: 52%;
+  cursor: pointer;
+  text-align: center;
+}
+.filtro3 {
+  font-size: 15px;
+  height: 28px;
+  width: 160px;
+  background-color:rgba(243, 189, 72, 0.397); 
+  border-color:rgba(250, 204, 77, 0.76);
+  color: black;
+  border-radius: 0.4vw;
+  
+  position: absolute;
+  top: 10.5%;
+  left: 36.5%;
+  cursor: pointer;
+  text-align: center;
+}
+
+.Filtro4{
+  font-size: 15px;
+  height: 28px;
+  width: 160px;
+  background-color:rgba(243, 189, 72, 0.397); 
+  border-color:rgba(250, 204, 77, 0.76);
+  color:black;
+  border-radius: 0.4vw;
+  border-color: rgb(148, 84, 6);
+  position: absolute;
+  cursor: pointer;
+  top: 10.5%;
+  left:5%;
+  text-align: center;
+}
+
+ .like{
+  font-size: 15px;
+  height: 28px;
+  width: 160px;
+  background-color:rgba(243, 189, 72, 0.397); 
+  border-color:rgba(250, 204, 77, 0.76);
+  color:black;
+  border-radius: 0.4vw;
+  position: absolute;
+  cursor: pointer;
+  top: 10.5%;
+  left: 67%;
+  text-align: center;
+} 
+.allRecipes {
+  font-size: 15px;
+  height: 28px;
+  width: 160px;
+  background-color:rgba(243, 189, 72, 0.397); 
+  border-color:rgba(250, 204, 77, 0.76);
+  color: black;
+  border-radius: 0.4vw;
+  position: absolute;
+  cursor: pointer;
+  top: 10.5%;
+  left:82%;
+  text-align: center;
+}
+#not_found{
+  color: rgba(255, 0, 0, 0.911);
+  font-size: 23px;
+  background-color:rgb(123, 118, 111);
+  border-radius: 0.4vw;
+  height: 48px;
+  width: 188px;
+  padding: 0.7vw;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+}
+
+#not_found2{
+  position: absolute;
+  top: 38%;
+  left: 43.5%;
+  color: rgba(0, 0, 0, 0.911);
+  font-size: 23px;
+}
+
+#img{
+  position: absolute;
+  top: 30%;
+  left: 39.5%;
+  height: 15vw;
+  width: 15vw;
+}

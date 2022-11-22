@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2? family= Fasthand & display=swap');
+
+ .recipeContainer {
+    border: initial;
+    width: 100%;
+    height: 50vw;
+    box-shadow: 5px 2px 15px 0px rgb(195, 194, 194);
+    background-image: url("wallpaperflare.com_wallpaper.jpg");
+    backdrop-filter: blur(200px);
+    display: flex; 
+    opacity: 0.95;
+  }
+   
+  #buttonReturn {
+    font-size: 16px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 32px;
+    width:95px;
+    background-color: rgba(238, 225, 198, 0.397);
+    border-color:rgba(92, 56, 3, 0.849) ;
+    border-radius: 0.4vw;
+    color: rgb(10, 10, 10);
+    position: absolute;
+    top: 10%;
+    left: 13%;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    padding-top: 0px;
+  }
+
+  #buttonReturn:hover {
+    background-color: rgba(236, 178, 17, 0.911);
+    border-radius: 0.4vw;
+    border-color:rgba(177, 131, 6, 0.911);
+    background: rgba(236, 178, 17, 0.911);
+    box-shadow: 0 0 10px rgba(236, 178, 17, 0.911), 0 0 40px rgba(236, 178, 17, 0.911), 0 0 80px rgba(236, 178, 17, 0.911) ;
+    transition-delay: 0.4s;
+  }
+
+     .recipeContainer2 {
+       border-radius: 3px;
+      font-size: 12.5px;
+      width: 20%;
+      height: 87%;
+      background-color: #faf6ef63;
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter:blur(3px) ;
+      text-align:center;
+      color: #000000cc;
+      margin-top: 2%;
+      margin-left: 25%; 
+      
+    }    
+  .recipeDetail_text1 {
+    right: 50px;
+    border-radius: 3px;
+    font-size: 12.5px;
+    width: 40%;
+    height: 87%;
+    background-color: #faf6ef63;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter:blur(3px) ;
+    text-align:center;
+    color: #000000c4;
+    margin-top: 2%;
+    margin-left: 5%;
+   
+  } 
+
+  #title {
+    font-size: 18px;
+    margin-bottom: 7px;
+    font-family: 'Fasthand', cursive;
+    color: black;
+  }
+  #title2 {
+    font-size: 18px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    font-family: 'Fasthand', cursive;
+    color: black;
+  } 
+ #ingredients{
+  font-size: 18px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  font-family: 'Fasthand', cursive;
+  color: black;
+}
+
+ #Recipe{
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 0px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-decoration:underline;
+  color: black;
+  margin-top: 5px;
+}
+  /*#body2 {
+    font-family: 'Fasthand', cursive;
+  }  */
+  
+  .Preparation{
+    font-size: 14px;
+    font-family: 'Fasthand', cursive;
+    margin-top: -2px;
+       
+   } 
+   .recipeContainer2 h2 {
+    color: #052f03;
+    font-size: 14px;
+    font-family:'Fasthand', cursive;
+    
+  
+  }  
+    .recipeContainer2 h1 {
+    color: #0a0a0a;
+    font-size: 17px;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: -11px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }  
+  #not_found2{
+    position: absolute;
+    top: 38%;
+    left: 43.5%;
+    color: rgba(0, 0, 0, 0.911);
+    font-size: 23px;
+  }
+  .img {
+    width:265px;
+    height:125px;
+    margin-top: -28px;
+  }

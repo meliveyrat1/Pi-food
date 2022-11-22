@@ -1,0 +1,38 @@
+
+.buttonSearch {
+    font-size: 15px;
+    height: 30px;
+    width:80px;
+    background-color: rgba(243, 189, 72, 0.397);
+    border-color:rgba(105, 65, 5, 0.849) ;
+    border-radius: 0.4vw;
+    color: black;
+    position: absolute;
+    top: 2.3%;
+    left: 63%;
+    cursor: pointer;
+  transition-duration: 0.4s;
+  }
+.buttonSearch:hover {
+  background-color: rgba(236, 178, 17, 0.911);
+  border-radius: 0.4vw;
+  border-color:rgba(177, 131, 6, 0.911);
+  background: rgba(236, 178, 17, 0.911);
+  box-shadow: 0 0 10px rgba(236, 178, 17, 0.911), 0 0 40px rgba(236, 178, 17, 0.911), 0 0 80px rgba(236, 178, 17, 0.911) ;
+  transition-delay: 0.4s;
+}
+
+  #inputName {
+    border-radius: 2px;
+    
+    border-color:rgba(105, 65, 5, 0.849) ;
+    height: 19px;
+    width: 140px;
+    margin-top: 0px;
+    padding-left: 5px;
+    position: absolute;
+    top: 2.5%;
+    left: 69%;
+    color:black
+    
+  }

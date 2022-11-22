@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2? family= Fasthand & display=swap');
+ .card {
+    background-color:#fbeedc58;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter:blur(3px) ;
+    margin: 0px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 1%;
+    text-decoration: none;
+    width: 20vw;
+    height: 24vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.6s;
+    box-shadow: 5px 2px 15px 1px rgba(248, 171, 70, 0.548);
+    border: 1px solid rgba(105, 65, 5, 0.849);
+  } 
+   
+   .card_container {
+    background: url("detalle.jpg");
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, min(25vw));
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+  }
+/*   .title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: #f7c049;
+    
+  }
+    */
+    .card_info1{
+      flex-direction: column;
+      text-align:center;
+      height: 8vw;
+      color:black;
+      font-size: 20px;
+    }  
+
+   .card_info2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 0vw;
+    color:rgb(59, 56, 56);
+    padding: 0px;
+    font-size: 14px;
+    
+  } 
+  .background-top-row{
+    
+    color: rgb(243, 20, 20);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgba(189, 192, 189, 0.959);
+    border-radius: 10px;
+    
+} 
+ 
+  .card_img {
+    width: 95%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card:hover {
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 0 20px 0 rgb(239, 246, 247);
+  }
+   
+   
