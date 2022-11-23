@@ -3,7 +3,6 @@ const initialState = {
   allRecipes: [], //CREADA PARA LAS DIETAS --> ALL
   diets: [],
   detail: [],
-  namesRecipes: [],
   error: "",
 };
 
@@ -36,21 +35,7 @@ function rootReducer(state = initialState, action) {
         ...state,
         recipes: statusFiltered,
       };
-      case "GET_NAMES_RECIPES":
-        return {
-        ...state,
-        namesRecipes: action.payload
-      }
-       
-      case "FILTER_BY_NAMES":
-      const allNames = state.allRecipes;//ALLRECIPES RETURN RECIPES
-      const filterByNames = action.payload === 'all' ? allNames :
-      allNames.filter(r => r.namesRecipes?.find((e)=> e.includes(action.payload)))
-      return {
-        ...state,
-      recipes: filterByNames
-      }
-      
+  
 
     case "FILTER_BY_DISHTYPES":
       const allRecipes1 = state.allRecipes;
@@ -105,13 +90,23 @@ function rootReducer(state = initialState, action) {
     case "ORDER_BY_SCORE":
       let sorteredByScore =
         action.payload === "high"
-          ? state.recipes.sort(function (a, b) {
-              // return sorteredByScore.sort((a,b)=>{
-              return b.healthScore - a.healthScore;
+            ? state.recipes.sort(function (a, b) {
+              if (b.healthScore > a.healthScore) {
+                return 1;
+              }
+              if (a.healthScore > b.healthScore) {
+                return -1;
+              }
+              return 0;
             })
           : state.recipes.sort(function (a, b) {
-              // return sorteredByScore.sort((a,b)=>{
-              return a.healthScore - b.healthScore;
+              if (b.healthScore > a.healthScore) {
+                return -1;
+              }
+              if (a.healthScore > b.healthScore) {
+                return 1;
+              }
+              return 0;
             });
       return {
         ...state,
@@ -120,13 +115,31 @@ function rootReducer(state = initialState, action) {
 
     case "ORDER_BY_LIKE":
       let sorteredByLike =
-        action.payload === "high"
-          ? state.recipes.sort(function (a, b) {
+        action.payload === "High"
+         /*  ? state.recipes.sort(function (a, b ) {
               return b.aggregateLikes - a.aggregateLikes;
             })
           : state.recipes.sort(function (a, b) {
               return a.aggregateLikes - b.aggregateLikes;
-            });
+            });  */
+             ? state.recipes.sort(function (a, b) {
+              if (b.aggregateLikes > a.aggregateLikes) {
+                return 1;
+              }
+              if (a.aggregateLikes > b.aggregateLikes) {
+                return -1;
+              }
+              return 0;
+            })
+          : state.recipes.sort(function (a, b) {
+              if (b.aggregateLikes > a.aggregateLikes) {
+                return -1;
+              }
+              if (a.aggregateLikes > b.aggregateLikes) {
+                return 1;
+              }
+              return 0;
+            }); 
       return {
         ...state,
         recipes: sorteredByLike,
@@ -187,6 +200,22 @@ export default rootReducer;
 
 
 
+
+  /*   case "GET_NAMES_RECIPES":
+        return {
+        ...state,
+        namesRecipes: action.payload
+      } */
+       
+   /*     case "FILTER_BY_NAMES":
+      const allNames = state.allRecipes;//ALLRECIPES RETURN RECIPES
+      const filterByNames =   action.payload === 'all' ? allNames :  
+      allNames.filter(r => r.title?.find((e)=> e.title === action.payload || e === action.payload)) 
+      return {
+        ...state,
+      recipes: filterByNames
+      } 
+       */
 
  /*   case 'UPDATE_RECIPE':
         return {

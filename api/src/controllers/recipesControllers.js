@@ -54,6 +54,10 @@ const getDbInfo = async () => {
         diets: e.diets.map((e) => e.title),
         image: e.image,
         cuisines: e.cuisines,
+        ingredients: e.ingredients,
+   
+      
+      readyInMinutes: e.readyInMinutes,
         createdInDb: e.createdInDb,
       };
     });

@@ -22,6 +22,9 @@ function validate(input) {
   if (input.healthScore < 0 || input.healthScore > 100) {
     errors.healthScore = "Please, insert a number from 1 to 100";
   }
+  if (input.readyInMinutes < 0 || input.readyInMinutes > 100) {
+    errors.readyInMinutes = "Please, insert a number from 1 to 100";
+  }
  if(input.diets === 0){
   errors.diets = 'Chosse a diet'
  }
@@ -31,6 +34,9 @@ function validate(input) {
 if (!input.cuisines) {
   errors.cuisines = "Origin cuisine is required"
 }
+ if (!input.ingredients) {
+  errors.ingredients = "Ingredients is required"
+} 
   return errors;
 }
 
@@ -51,6 +57,8 @@ export default function RecipeCreate() {
     cuisines: "" ,
     steps: [],
     diets: [],
+    ingredients: "",
+    readyInMinutes: "",
   });
 
   //--- HANDLERS
@@ -115,6 +123,19 @@ export default function RecipeCreate() {
       })
     );
   }
+  function handleSelectIngredients(e) {
+    setInput({
+      ...input,
+      ingredients: [e.target.value],
+    });
+    setErrors(
+      validate({
+        ...input,
+        [e.target.name]: e.target.value,
+      })
+    );
+  }
+
 
 
 
@@ -132,6 +153,8 @@ export default function RecipeCreate() {
       cuisines: "",
       steps: [],
       diets: [],
+      ingredients: "",
+      readyInMinutes: "",
     });
     history.push("/home");
   }
@@ -180,6 +203,27 @@ export default function RecipeCreate() {
               />
               {errors.healthScore && <h5 className="error">{errors.healthScore}</h5>}
             </div>
+            <div className="text">
+              <label>Preparation Time: </label>
+              <input
+                type="number"
+                value={input.readyInMinutes}
+                name="readyInMinutes"
+                onChange={(e) => handleInputChange(e)}
+              />
+              {errors.readyInMinutes && <h5 className="error">{errors.readyInMinutes}</h5>}
+            </div>
+             <div className="text">
+              <label>Ingredients: </label>
+              <input
+                className="textarea"
+                type="text"
+                value={input.ingredients}
+                name="ingredients"
+                onChange={(e) => handleSelectIngredients(e)}
+              />
+              {errors.ingredients && <h5 className="error">{errors.ingredients}</h5>}
+            </div> 
        
             <div className="text">
               <label>Summary: </label>
@@ -248,6 +292,8 @@ export default function RecipeCreate() {
             errors.steps ||
             errors.cuisines ||
             errors.healthScore ||
+            errors.readyInMinutes ||
+            errors.ingredients ||
             errors.diets ||
             input.title === "" ? (
             <button className="createButton2" select disabled type="submit">

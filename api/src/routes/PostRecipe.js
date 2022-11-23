@@ -9,18 +9,20 @@ router.post("/", checkData, async (req, res, next) => {
       title,
       summary,
       cuisines,
-      readyInMinutes,
       healthScore,
       steps,
       diets,
       image,
       dishTypes,
+      ingredients,
+      readyInMinutes,
     } = req.body;
 
     let recipeCreated = await Recipe.create({
       title,
       summary,
       cuisines,
+      ingredients,
       readyInMinutes,
       healthScore,
       steps,
@@ -42,13 +44,6 @@ router.post("/", checkData, async (req, res, next) => {
       await recipeCreated.addDishTypes(dishTypeDb);
       //console.log("acaaaaa", dietDb);
     });   
-
-/*     title.forEach(async (e) => {
-      let titleDb = await NameRecipes.findAll({
-        where: { title: e},
-      })
-      await recipeCreated.addNameRecipes(titleDb)
-    }) */
     
     res.status(200).send("Recipe created successfully");
   } catch (error) {

@@ -81,22 +81,7 @@ export function getDetails(id) {
 	};
 }
 
-export function getNamesRecipes() {
-	return (dispatch) => {
-		axios.get("http://localhost:3001/names")
-		.then((response) => {
-			dispatch({ type: "GET_NAMES_RECIPES", payload: response.data });
-		});
-    
-	};
-}  
 
-export function filterRecipesbyNames(payload) {
-  return {
-    type: "FILTER_BY_NAMES",
-    payload,
-  };
-}
 
 export function removeDetail() {
   return {
@@ -171,3 +156,20 @@ export function removeDetail() {
     }
  } 
 } */
+ 
+/* export function getNamesRecipes() {
+	return (dispatch) => {
+		axios.get("http://localhost:3001/names")
+		.then((response) => {
+			dispatch({ type: "GET_NAMES_RECIPES", payload: response.data });
+		}).catch(() => alert("Get Names Recipes Error"))
+    
+	};
+}   */
+/* 
+export function filterRecipesbyNames(payload) {
+  return {
+    type: "FILTER_BY_NAMES",
+    payload,
+  };
+}  */

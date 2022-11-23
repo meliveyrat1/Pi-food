@@ -7,9 +7,7 @@ import {
   orderByScore,
   orderByLike,
   filterRecipesbyDishTypes,
-  filterCreated, 
-   getNamesRecipes,
-   filterRecipesbyNames, 
+  filterCreated,   
 } from "../../actions";
 
 import Card from "../Card/Card";
@@ -21,7 +19,6 @@ import "./Home.css";
 export default function Home() {
   const dispatch = useDispatch();
   const allRecipes = useSelector((state) => state.recipes);
-  const allNames = useSelector((state) => state.allRecipes)//estaaa allrecipes
   const recetas = useSelector((state) => state.allRecipes);
   const notFound = useSelector((state) => state.error);
 
@@ -43,19 +40,10 @@ export default function Home() {
   //nos traemos las recetas del estado cuando se monta
   useEffect(() => {
     dispatch(getRecipes());
-    dispatch(getNamesRecipes())
-    //dispatch(getNamesRecipes())
+
   }, [dispatch]);
 
-  function  handleFilterRecipesbyNames(e){
-    e.preventDefault(e);
-    dispatch( filterRecipesbyNames(e.target.value))
-    setCurrentPage(1);
-    //setOrden(e.target.value);
-
-  } 
-
-
+ 
   function handleFilterRecipes(e) {
     dispatch(filterRecipesbyDiets(e.target.value));
     setCurrentPage(1);
@@ -125,11 +113,9 @@ export default function Home() {
             defaultValue="OrderByVote"
             onChange={(e) => handleOrderByLike(e)}
           >
-            <br></br>
-            <br></br>
             <option value="sortByLike" select disabled>
               Order By Likes </option>
-            <option value="high">Most voted</option>
+            <option value="High">Most voted</option>
             <option value="low">Least voted</option>
           </select>
 
@@ -185,14 +171,18 @@ export default function Home() {
         </select>  
         </div>
       
-           <select className="filtro6" defaultValue="name recipe" 
-          name="namesRecipes" onChange={e =>  handleFilterRecipesbyNames(e)}>
+       {/*     <select className="filtro6" defaultValue="name recipe" 
+          name="namesRecipes"  onChange={e =>  handleFilterRecipesbyNames(e)}>
           <option value="selected" disabled selected>Name Recipe</option>
-           <option value='all'>ALL</option>
-          {allNames?.map(n => (
-            <option key={n.id} id={n.id} value={n.title} >{n.title}</option>
-          ))} 
-          </select> 
+         <option value='all'>ALL</option>   
+          {allNames?.map(n => {
+            return (
+              <option key={n.id} id={n.id} value={n.ingredients} >{n.ingredients}</option>
+            )
+          }
+           
+          )} 
+          </select>   */}
         
     </div>
       <div>
