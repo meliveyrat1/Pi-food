@@ -13,9 +13,9 @@
 </h3>
  <img src="https://user-images.githubusercontent.com/105014904/204051766-c7d121b0-d114-443f-bcc7-beb2f3a5b8fd.png"/>
 <h3>.Detail page</h3>
- <img src="https://user-images.githubusercontent.com/105014904/199569720-8bd9adca-78ea-45b8-a7b0-8bfbe431c5e3.png"/>
+ <img src="https://user-images.githubusercontent.com/105014904/204052045-d3f4a026-6e4e-494f-9bae-33c674c575d0.png"/>
 <h3>.Form page</h3>
- <img src="https://user-images.githubusercontent.com/105014904/199569991-60ca3dce-170f-4872-a1cd-b685d53d1509.png"/>
+ <img src="https://user-images.githubusercontent.com/105014904/204052096-5e686ab7-428c-41a1-9cf2-5c65f368c2e0.png"/>
 </div>
 
 ## Objetivos del Proyecto
