@@ -9,8 +9,9 @@
 <h1>Project screens</h1>
 <h3>.Landing page</h3>
  <img src="https://user-images.githubusercontent.com/105014904/204051621-aa3d5908-9dac-4cf1-beac-a789409999c8.png "/>
+<h3>.Home</h3>
 </h3>
- <img src="https://user-images.githubusercontent.com/105014904/199569299-dd14e411-f9bd-479f-9a37-7b4dddb59791.png"/>
+ <img src="https://user-images.githubusercontent.com/105014904/204051766-c7d121b0-d114-443f-bcc7-beb2f3a5b8fd.png"/>
 <h3>.Detail page</h3>
  <img src="https://user-images.githubusercontent.com/105014904/199569720-8bd9adca-78ea-45b8-a7b0-8bfbe431c5e3.png"/>
 <h3>.Form page</h3>
