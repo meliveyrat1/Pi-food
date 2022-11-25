@@ -5,6 +5,17 @@
 <p align="right">
   <img height="200" src="./cooking.png" />
 </p>
+<div >
+<h1>Project screens</h1>
+<h3>.Landing page</h3>
+ <img src="https://user-images.githubusercontent.com/105014904/199568152-0efb5d01-aed7-4de3-be2b-c87b9920ad20.png"/>
+<h3>.Home page</h3>
+ <img src="https://user-images.githubusercontent.com/105014904/199569299-dd14e411-f9bd-479f-9a37-7b4dddb59791.png"/>
+<h3>.Detail page</h3>
+ <img src="https://user-images.githubusercontent.com/105014904/199569720-8bd9adca-78ea-45b8-a7b0-8bfbe431c5e3.png"/>
+<h3>.Form page</h3>
+ <img src="https://user-images.githubusercontent.com/105014904/199569991-60ca3dce-170f-4872-a1cd-b685d53d1509.png"/>
+</div>
 
 ## Objetivos del Proyecto
 
@@ -187,5 +198,6 @@ __IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y pagin
 - [ ] Al menos tener un componente del frontend con sus tests respectivos
 - [ ] Al menos tener una ruta del backend con sus tests respectivos
 - [ ] Al menos tener un modelo de la base de datos con sus tests respectivos
-#   P I - - F O O D  
- 
+#� �P�I�-�-�F�O�O�D�
+�
+�
