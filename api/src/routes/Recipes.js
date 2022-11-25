@@ -2,9 +2,9 @@ const { Router } = require("express");
 const router = Router();
 const { getAllRecipes } = require("./../controllers/recipesControllers");
 
-//RUTAS PARA TRAER INFORMACION DE LAS RECETAS
 
-//RUTA PARA OBTENER LAS RECETAS POR NAME (QUERY)
+
+
 router.get("/", async (req, res) => {
   try {
     const name = req.query.name;
@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
 
       recipesByName.length
         ? res.status(200).json(recipesByName)
-        : res.status(200).json([]);
+        : res.status(400).json([]);
     } else {
       res.status(200).json(totalRecipes);
     }
@@ -25,7 +25,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// RUTA PARA OBTENER LAS RECETAS POR ID (PARAMS)
+
 router.get("/:id", async (req, res, next) => {
   const id = req.params.id;
   try {

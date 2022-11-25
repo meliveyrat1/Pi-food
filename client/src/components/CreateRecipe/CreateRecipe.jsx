@@ -45,7 +45,7 @@ if (!input.cuisines) {
 export default function RecipeCreate() {
   const dispatch = useDispatch();
   const history = useHistory();
-  const diets = useSelector((state) => state.diets); //me traigo el estado de las dietas con el useSelector
+  const diets = useSelector((state) => state.diets); 
 
   //CREO ESTADOS LOCALES PARA ALMACENAR INFORMACION
   const [errors, setErrors] = useState({});

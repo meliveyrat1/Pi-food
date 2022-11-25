@@ -5,7 +5,7 @@ import { getDetails, getRecipes, removeDetail, removeRecipe} from "../../actions
 import { useEffect } from "react";
 import "./RecipeDetails.css";
 
-export default function Details(props,id) {
+export default function Details(props) {
   console.log("PROPIEDADES", props);
   const dispatch = useDispatch();
   const history = useHistory()
@@ -23,12 +23,12 @@ export default function Details(props,id) {
   const myRecipe = useSelector((state) => state.detail);
   // console.log("Recetaa", myRecipe)
 
-  function deleteRecipe(){
+   function deleteRecipe(){
     var answer = window.confirm("are you sure to delete this recipe?")
     if (answer === true)
     {
-      dispatch(removeRecipe(id));
-      dispatch(removeDetail());//????
+      dispatch(removeRecipe(props.match.params.id));
+      dispatch(removeDetail());
       dispatch(getDetails());
       alert("deleted recipe")
       dispatch(getRecipes());
@@ -37,13 +37,11 @@ export default function Details(props,id) {
     }else{
       return false;
     }
-  }
+  } 
 
   return (//poner id?. hacer createdindb?
     <div style={{ overflow: "hidden" }}>
-
-      <button  onClick={() => deleteRecipe()}>Delete</button>
-      
+        
       {myRecipe.length === 0 ? (
         <div>
           <p id="not_found2">Loading...</p>
@@ -55,7 +53,7 @@ export default function Details(props,id) {
         </div>
       ) : (
         <div className="recipeContainer">
-
+     
           <div className="recipeContainer2">
             <h1 className="title">{myRecipe[0].title}</h1>
             <img className="img"
@@ -71,17 +69,15 @@ export default function Details(props,id) {
             <h3 className="Preparation"> Like: </h3>
             <h2 className="Textito">{myRecipe[0].aggregateLikes}</h2>
             <h3 className="Preparation">Diets: </h3>
-            <h2 className="Textito">{myRecipe[0].diets}</h2>
+            <h2 className="Textito">{!myRecipe[0].createdInDb? myRecipe[0].diets + ' ' : myRecipe[0].diets + ' '}</h2>
             <h3 className="Preparation">Dish Type:</h3>
             <h2 className="Textito"> {myRecipe[0].dishTypes}</h2>
             <h3 className="Preparation">Origin Cuisine:</h3>
             <h2 className="Textito">{myRecipe[0].cuisines}</h2>
-
-
-
-
           </div>
+          
           <div className="recipeDetail_text1">
+           <button className="btnx" onClick={() => deleteRecipe()}>X</button> 
             <p id="Recipe">RECIPE</p>
             <p id="ingredients">Ingredients: </p>
             <p className="body">{myRecipe[0].ingredients}</p>
@@ -89,15 +85,19 @@ export default function Details(props,id) {
             <p className="body">{myRecipe[0].summary}</p>
             <p id="title2">Instructions: </p>
             <p id="body2">{myRecipe[0].steps}</p>
-
           </div>
           
-          <Link to="/home">
+         
+        <div>
+         <Link to="/home">
             <button id="buttonReturn">RETURN</button>
-          </Link>
-        </div>
+          </Link> 
+         
+          </div>
+      </div> 
+          
       )}
-      
+    
     </div>
   );
 }

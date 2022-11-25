@@ -13,7 +13,6 @@ router.post("/", checkData, async (req, res, next) => {
       steps,
       diets,
       image,
-      dishTypes,
       ingredients,
       readyInMinutes,
     } = req.body;
@@ -37,13 +36,7 @@ router.post("/", checkData, async (req, res, next) => {
       await recipeCreated.addDiet(dietDb);
       //console.log("acaaaaa", dietDb);
     });
-      dishTypes.forEach(async (e) => {
-      let dishTypeDb = await DishType.findAll({
-        where: { title: e }
-      });
-      await recipeCreated.addDishTypes(dishTypeDb);
-      //console.log("acaaaaa", dietDb);
-    });   
+  
     
     res.status(200).send("Recipe created successfully");
   } catch (error) {
@@ -84,3 +77,25 @@ router.delete("/:id", async (req, res, next) => {
 });  
 
 module.exports = router;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*   dishTypes.forEach(async (e) => {
+      let dishTypeDb = await DishType.findAll({
+        where: { title: e }
+      });
+      await recipeCreated.addDishTypes(dishTypeDb);
+      //console.log("acaaaaa", dietDb);
+    });    */

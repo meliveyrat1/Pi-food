@@ -55,9 +55,7 @@ const getDbInfo = async () => {
         image: e.image,
         cuisines: e.cuisines,
         ingredients: e.ingredients,
-   
-      
-      readyInMinutes: e.readyInMinutes,
+        readyInMinutes: e.readyInMinutes,
         createdInDb: e.createdInDb,
       };
     });

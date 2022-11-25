@@ -4,7 +4,7 @@ const axios = require("axios");
 const router = Router();
 const { API_KEY } = process.env;
 
-router.get("/", async (req, res) => {
+router.get("/", async (req, res,next) => {
   try {
     const info = await axios.get(
       `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100`
@@ -24,7 +24,7 @@ router.get("/", async (req, res) => {
     const newDiets = await Diet.findAll();
     res.status(200).json(newDiets);
   } catch (error) {
-    console.log(error);
+    next(error);
   }
 });
 module.exports = router;

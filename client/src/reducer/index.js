@@ -40,7 +40,7 @@ function rootReducer(state = initialState, action) {
     case "FILTER_BY_DISHTYPES":
       const allRecipes1 = state.allRecipes;
       const statusFil =
-        action.paylod === "all"
+        action.paylod === "All"
           ? allRecipes1
           : allRecipes1.filter((e) =>
               e.dishTypes.find((e) => e.includes(action.payload))
@@ -116,12 +116,6 @@ function rootReducer(state = initialState, action) {
     case "ORDER_BY_LIKE":
       let sorteredByLike =
         action.payload === "High"
-         /*  ? state.recipes.sort(function (a, b ) {
-              return b.aggregateLikes - a.aggregateLikes;
-            })
-          : state.recipes.sort(function (a, b) {
-              return a.aggregateLikes - b.aggregateLikes;
-            });  */
              ? state.recipes.sort(function (a, b) {
               if (b.aggregateLikes > a.aggregateLikes) {
                 return 1;
@@ -168,13 +162,11 @@ function rootReducer(state = initialState, action) {
       recipes: action.payload === "All" ? state.allRecipes : recipeFilter
     };
 
-    case "REMOVE_RECIPE":
+     case "REMOVE_RECIPE":
       return {
         ...state,
-       /*   allRecipes: [],
-        recipes: [], */ 
         recipes: state.recipes.filter(e => e.id !== action.payload)
-      };  
+      };   
 
     default:
       return state; //InitialState
@@ -200,32 +192,3 @@ export default rootReducer;
 
 
 
-
-  /*   case "GET_NAMES_RECIPES":
-        return {
-        ...state,
-        namesRecipes: action.payload
-      } */
-       
-   /*     case "FILTER_BY_NAMES":
-      const allNames = state.allRecipes;//ALLRECIPES RETURN RECIPES
-      const filterByNames =   action.payload === 'all' ? allNames :  
-      allNames.filter(r => r.title?.find((e)=> e.title === action.payload || e === action.payload)) 
-      return {
-        ...state,
-      recipes: filterByNames
-      } 
-       */
-
- /*   case 'UPDATE_RECIPE':
-        return {
-          ...state,
-      }
-       */
-
-  /*   case "REMOVE_RECIPE":
-      return {
-        ...state,
-        allRecipes: [],
-        recipes: [],
-      }; */

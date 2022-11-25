@@ -34,7 +34,7 @@ export function getDiets() {
       const json = await axios.post("http://localhost:3001/recipe", payload);
       return json;
     } catch (error) {
-      console.log(error)
+      alert("POST ERROR")
     }
   };
 } 
@@ -96,20 +96,20 @@ export function removeDetail() {
   }
 } 
 
- export function removeRecipe (id) {
+   export function removeRecipe (id) {
   return async function(dispatch){
     try {
-      const response = await axios.delete("http://localhost:3001/recipe" + id)
-      console.log(response)
+    await axios.delete("http://localhost:3001/recipe/" + id)
       return dispatch({
 				type: "REMOVE_RECIPE",
-				payload: response.data
+				payload: id,
 			})	
     } catch (error) {
       alert("DELETE ERROR")
+      
     }
  } 
-} 
+}   
 
 
 
@@ -121,55 +121,3 @@ export function removeDetail() {
 
 
 
-
-/* export function UpdateRecipe(payload, id){
-	return async function (dispatch) {
-    try {
-      var json = await axios.put("http://localhost:3001/recipe" + payload.id, payload);
-			return dispatch({
-				type: "UPDATE_RECIPE",
-				payload: json.data
-			})	
-    } catch (error) {
-      alert("UPDATE ERROR")
-    }
-  }
-} */
-
-
-/* export function removeRecipe() {
-  return {
-    type: "REMOVE_RECIPE",
-  };
-} */
-/* export function removeRecipe (id) {
-  return async function(dispatch){
-    try {
-      const response = await axios.delete("http://localhost:3001/recipe" + id)
-      console.log(response)
-      return dispatch({
-				type: "REMOVE_RECIPE",
-				payload: response.data
-			})	
-    } catch (error) {
-      alert("DELETE ERROR")
-    }
- } 
-} */
- 
-/* export function getNamesRecipes() {
-	return (dispatch) => {
-		axios.get("http://localhost:3001/names")
-		.then((response) => {
-			dispatch({ type: "GET_NAMES_RECIPES", payload: response.data });
-		}).catch(() => alert("Get Names Recipes Error"))
-    
-	};
-}   */
-/* 
-export function filterRecipesbyNames(payload) {
-  return {
-    type: "FILTER_BY_NAMES",
-    payload,
-  };
-}  */

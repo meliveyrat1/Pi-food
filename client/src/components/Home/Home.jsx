@@ -145,7 +145,7 @@ export default function Home() {
             className="Filtro4"
             defaultValue="all"
             onChange={(e) => handleFiltersRecipes(e)}>
-            <option value="all" select disabled>DishTypes</option>
+            <option value="All" select disabled>DishTypes</option>
             <option value="lunch">Lunch</option>
             <option value="main course">Main course</option>
             <option value="main dish">Main dish</option>
@@ -171,18 +171,6 @@ export default function Home() {
         </select>  
         </div>
       
-       {/*     <select className="filtro6" defaultValue="name recipe" 
-          name="namesRecipes"  onChange={e =>  handleFilterRecipesbyNames(e)}>
-          <option value="selected" disabled selected>Name Recipe</option>
-         <option value='all'>ALL</option>   
-          {allNames?.map(n => {
-            return (
-              <option key={n.id} id={n.id} value={n.ingredients} >{n.ingredients}</option>
-            )
-          }
-           
-          )} 
-          </select>   */}
         
     </div>
       <div>
